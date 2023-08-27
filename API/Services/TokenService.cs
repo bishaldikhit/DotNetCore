@@ -16,6 +16,7 @@ namespace API.Services
         {
             _userManager = userManager;
             _key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(config["TokenKey"]));
+            Console.WriteLine("");
         }
 
         public async Task<string> CreateToken(AppUser user)
